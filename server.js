@@ -14,11 +14,11 @@ if (process.env.BASIC_AUTH_USERNAME) {
     server.use(prerender.basicAuth());
 }
 
-server.use(prerender.inMemoryHtmlCache());
+// server.use(prerender.inMemoryHtmlCache());
 
 //server.use(prerender.blacklist());
 server.use(prerender.httpHeaders());
-// server.use(prerender.s3HtmlCache());
+ server.use(prerender.s3HtmlCache());
 // server.use(require('my-plugin'));
 
 server.start();
